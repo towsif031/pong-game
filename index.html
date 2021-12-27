@@ -8,9 +8,15 @@
 		<!-- css -->
 		<link rel="stylesheet" href="./assets/css/main.css" />
 		<!-- js -->
-		<script defer src="./assets/js/main.js"></script>
+		<script defer src="./assets/js/main.js" type="module"></script>
 	</head>
 	<body>
-		<h1>Pong Game</h1>
+		<div class="score">
+			<div id="player-score">0</div>
+			<div id="computer-score">0</div>
+		</div>
+		<div class="ball" id="ball"></div>
+		<div class="paddle left" id="player-paddle"></div>
+		<div class="paddle right" id="computer-paddle"></div>
 	</body>
 </html>
