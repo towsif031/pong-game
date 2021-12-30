@@ -40,7 +40,29 @@ body {
 	background-color: $foreground-color;
 	left: calc(#{$x} * 1vw);
 	top: calc(#{$y} * 1vh);
+	border-radius: 50%;
 	transform: translate(-50%, -50%);
 	width: 2.5vh;
 	height: 2.5vh;
+}
+
+.score {
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 7vh;
+	color: $foreground-color;
+
+	* {
+		flex-grow: 1;
+		flex-basis: 0;
+		padding: 0 2vh;
+		margin: 1vh 0;
+		opacity: 0.5;
+	}
+
+	:first-child {
+		text-align: right;
+		border-right: 0.5vh solid $foreground-color;
+	}
 }
