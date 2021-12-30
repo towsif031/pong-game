@@ -1,5 +1,46 @@
+$hue: 200;
+$saturation: 50%;
+$foreground-color: hsl($hue, $saturation, 75%);
+$background-color: hsl($hue, $saturation, 20%);
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+body {
+	background-color: $background-color;
+}
+
+.paddle {
+	$position: 50;
+
+	position: absolute;
+	background-color: $foreground-color;
+	top: calc(#{$position} * 1vh);
+	transform: translateY(-50%);
+	width: 1vh;
+	height: 10vh;
+
+	&.left {
+		left: 1vw;
+	}
+
+	&.right {
+		right: 1vw;
+	}
+}
+
+.ball {
+	$x: 50;
+	$y: 50;
+
+	position: absolute;
+	background-color: $foreground-color;
+	left: calc(#{$x} * 1vw);
+	top: calc(#{$y} * 1vh);
+	transform: translate(-50%, -50%);
+	width: 2.5vh;
+	height: 2.5vh;
 }

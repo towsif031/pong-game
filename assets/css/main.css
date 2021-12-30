@@ -2,4 +2,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #1a3c4d;
+}
+
+.paddle {
+  position: absolute;
+  background-color: #9fcadf;
+  top: calc(50 * 1vh);
+  transform: translateY(-50%);
+  width: 1vh;
+  height: 10vh;
+}
+.paddle.left {
+  left: 1vw;
+}
+.paddle.right {
+  right: 1vw;
+}
+
+.ball {
+  position: absolute;
+  background-color: #9fcadf;
+  left: calc(50 * 1vw);
+  top: calc(50 * 1vh);
+  transform: translate(-50%, -50%);
+  width: 2.5vh;
+  height: 2.5vh;
 }/*# sourceMappingURL=main.css.map */
