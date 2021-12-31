@@ -4,7 +4,7 @@ const ball = new Ball(document.querySelector('#ball'));
 
 let lastTime;
 function update(time) {
-	if (lastTime !== null) {
+	if (lastTime != null) {
 		const delta = time - lastTime;
 		ball.update(delta);
 	}
