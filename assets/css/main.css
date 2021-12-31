@@ -1,3 +1,13 @@
+:root {
+  --hue: 200;
+  --saturation: 50%;
+  --foreground-color: #9fcadf;
+  --background-color: #1a3c4d;
+  --position: 50;
+  --x: 50;
+  --y: 50;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,13 +15,13 @@
 }
 
 body {
-  background-color: #1a3c4d;
+  background-color: var(--background-color);
 }
 
 .paddle {
   position: absolute;
-  background-color: #9fcadf;
-  top: calc(50 * 1vh);
+  background-color: var(--foreground-color);
+  top: calc(var(--position) * 1vh);
   transform: translateY(-50%);
   width: 1vh;
   height: 10vh;
@@ -25,9 +35,9 @@ body {
 
 .ball {
   position: absolute;
-  background-color: #9fcadf;
-  left: calc(50 * 1vw);
-  top: calc(50 * 1vh);
+  background-color: var(--foreground-color);
+  left: calc(var(--x) * 1vw);
+  top: calc(var(--y) * 1vh);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   width: 2.5vh;
@@ -39,7 +49,7 @@ body {
   justify-content: center;
   font-weight: bold;
   font-size: 7vh;
-  color: #9fcadf;
+  color: var(--foreground-color);
 }
 .score * {
   flex-grow: 1;
@@ -50,5 +60,5 @@ body {
 }
 .score :first-child {
   text-align: right;
-  border-right: 0.5vh solid #9fcadf;
+  border-right: 0.5vh solid var(--foreground-color);
 }/*# sourceMappingURL=main.css.map */
