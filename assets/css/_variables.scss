@@ -1,7 +1,5 @@
 $hue: 200;
 $saturation: 50%;
-$foreground-color: hsl($hue, $saturation, 75%);
-$background-color: hsl($hue, $saturation, 20%);
 $position: 50;
 $x: 50;
 $y: 50;
@@ -9,8 +7,8 @@ $y: 50;
 :root {
 	--hue: #{$hue};
 	--saturation: #{$saturation};
-	--foreground-color: #{$foreground-color};
-	--background-color: #{$background-color};
+	--foreground-color: hsl(var(--hue), var(--saturation), 75%);
+	--background-color: hsl(var(--hue), var(--saturation), 20%);
 	--position: #{$position};
 	--x: #{$x};
 	--y: #{$y};
